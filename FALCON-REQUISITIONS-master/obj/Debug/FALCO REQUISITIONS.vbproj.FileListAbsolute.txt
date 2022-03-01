@@ -1,0 +1,13 @@
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\bin\Debug\FALCO REQUISITIONS.exe.config
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\bin\Debug\FALCO REQUISITIONS.exe
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\bin\Debug\FALCO REQUISITIONS.pdb
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\bin\Debug\FALCO REQUISITIONS.xml
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\obj\Debug\FALCO REQUISITIONS.vbproj.ResolveComReference.cache
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\obj\Debug\FALCO_REQUISITIONS.Form1.resources
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\obj\Debug\FALCO_REQUISITIONS.Resources.resources
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\obj\Debug\FALCO REQUISITIONS.vbproj.GenerateResource.cache
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\obj\Debug\FALCO REQUISITIONS.vbproj.CoreCompileInputs.cache
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\obj\Debug\FALCO REQUISITIONS.exe
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\obj\Debug\FALCO REQUISITIONS.xml
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\obj\Debug\FALCO REQUISITIONS.pdb
+\\utcn-dc-fs1\student-home$\2018\U18J2GREEN\Downloads\FALCON-REQUISITIONS-master\FALCON-REQUISITIONS-master\obj\Debug\FALCO REQUISITIONS.vbprojAssemblyReference.cache
