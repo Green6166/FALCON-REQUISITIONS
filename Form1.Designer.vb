@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -39,6 +40,9 @@ Partial Class Form1
         Me.TextBox4authorisation = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.Tim = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,10 +60,9 @@ Partial Class Form1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(329, 328)
+        Me.PictureBox1.Location = New System.Drawing.Point(326, 381)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(112, 59)
+        Me.PictureBox1.Size = New System.Drawing.Size(129, 57)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
@@ -158,7 +161,7 @@ Partial Class Form1
         Me.TextBox4from.Name = "TextBox4from"
         Me.TextBox4from.Size = New System.Drawing.Size(166, 29)
         Me.TextBox4from.TabIndex = 13
-        Me.TextBox4from.Text = "ruppertreq@outlook.com"
+        Me.TextBox4from.Text = "jgree6661@gmail.com"
         '
         'TextBox4authorisation
         '
@@ -169,7 +172,7 @@ Partial Class Form1
         Me.TextBox4authorisation.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8225)
         Me.TextBox4authorisation.Size = New System.Drawing.Size(166, 29)
         Me.TextBox4authorisation.TabIndex = 14
-        Me.TextBox4authorisation.Text = "MarthertheDog61"
+        Me.TextBox4authorisation.Text = "sound-wave-superior"
         '
         'Label5
         '
@@ -188,6 +191,24 @@ Partial Class Form1
         Me.Label6.Size = New System.Drawing.Size(137, 13)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "password cipher encrypt on"
+        '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.NotifyIcon1.BalloonTipText = "email has been sent to target list! "
+        Me.NotifyIcon1.BalloonTipTitle = "EMAIL SENT"
+        Me.NotifyIcon1.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "Will notify you of successful emailings"
+        Me.NotifyIcon1.Visible = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'Tim
+        '
         '
         'Form1
         '
@@ -234,4 +255,7 @@ Partial Class Form1
     Friend WithEvents TextBox4authorisation As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents Tim As Timer
 End Class
