@@ -18,7 +18,7 @@ Public Class Form1
         End If
         If email.Contains("@") Then 'filter the jargon as it scans alot of crap aswell
             Try
-                Tim.Interval = 4000 'sets time to 4secs
+                Tim.Interval = 5000 'sets time to 5secs    1sec:1000 interval value
                 Dim Smtp_Server As New SmtpClient 'defines new client
                 Dim e_mail As New System.Net.Mail.MailMessage() 'starts a new message
                 Smtp_Server.UseDefaultCredentials = False 'no default credentials as there are custom details to add to the client
@@ -49,25 +49,32 @@ Public Class Form1
                 'gives user a notification that email is sent  - used to got pretty annoying nower days its much less intruding on work flow
                 'timer for waiting for other email functions
                 Tim.Start() 'starts the timer
-                NotifyIcon1.Text = "Email Has Been Sent!" 'sets the text to the confirmation message
+                NotifyIcon1.BalloonTipTitle = "Email Has Been Sent!" 'sets the text to the confirmation message
+                NotifyIcon1.BalloonTipText = "Remember to double check your target email addresses though"
                 'shows confirmation message for 2 seconds or 2000 milliseconds
 
 
             Catch ex As Exception
-                NotifyIcon1.Text = "There is a problem..." 'sets the text to the error message
+                NotifyIcon1.BalloonTipTitle = "There is a problem..." 'sets the text to the error message
+                NotifyIcon1.BalloonTipText = ex.Message.ToString()
+                If ShowErrorMessages.Checked = True Then 'if the tickbox is true then it will display full messageboxes
+                    MsgBox("60" & ex.ToString) 'msgbox straight after with more dat
+                End If
                 'shows error message for 2 seconds or 2000 milliseconds
-                MsgBox("54" & ex.ToString) 'msgbox straight after with more dat
-                Tim.Start()
-                'this is nothing because there is so many non emails in the code it is inefficent to put a message there everytime it comes across a non email and fails ard 
+
+            Finally
+                NotifyIcon1.ShowBalloonTip(5000)
             End Try
-            NotifyIcon1.ShowBalloonTip(2000)
+
+            Tim.Start()
+
         ElseIf TextBox2.Text.Contains("@") Then 'more filtering
             Tim.Start() 'started the timer
 
 
         Else
             NotifyIcon1.Text = "theres no valid emails to target!" 'sets message inregard to no valid emails
-            NotifyIcon1.ShowBalloonTip(3000) 'shows message above for 3 seconds
+            NotifyIcon1.ShowBalloonTip(5000) 'shows message above for 3 seconds
             Tim.Start() 'starts the timer
         End If
     End Function
@@ -105,7 +112,18 @@ Public Class Form1
         Catch ex As Exception
             MsgBox(ex.Message & " 76")
         End Try
+        Try
+            Dim checkboxsw As IO.StreamReader = IO.File.OpenText(docstr & "\falcon_checkbox_polarity.txt")
+            checkboxsw.ReadLine()
+            If checkboxsw.ReadLine.ToString = "True" Then
+                ShowErrorMessages.Checked = True
+            End If
+            checkboxsw.Close()
+        Catch ex As Exception
 
+
+
+        End Try
     End Sub
 
 
@@ -118,6 +136,9 @@ Public Class Form1
 
         End Try
         Try
+            Dim checkboxsw As IO.StreamWriter = IO.File.CreateText(docstr & "\falcon_checkbox_polarity.txt")
+            checkboxsw.Write(ShowErrorMessages.CheckState.ToString())
+            checkboxsw.Close()
             Dim SW2 As IO.StreamWriter = IO.File.CreateText(docstr & "\falcon_options_combobox1.txt") 'once wiped the code takes each line from the following text box and adds it to the representitive configfile as a .txt  
 
             SW2.Write(TextBox3.Text)
@@ -134,13 +155,13 @@ Public Class Form1
 
             SW3.Write(TextBox1.Text)
 
-            SW3.Close() 'closes the data stream
+            SW3.Close()
         Catch ex As Exception
             MsgBox("error" & ex.Message) 'catch and try statment to reduce crash risk
         End Try
     End Sub
 
-    Function kalcus() As Action  'kalcus is a misselling of calcus which is  derived from calculate   
+    Function kalcus() As Action  'kalcus is a misselling of calcus derived from calculate   
         Dim objWord As Microsoft.Office.Interop.Word.Application 'defines MSword as a application variable in itself
         Dim objDoc As Microsoft.Office.Interop.Word.Document ' defines the documents as a variable for defining other element positions
         Dim objTable As Microsoft.Office.Interop.Word.Table 'defines the table element for the document 

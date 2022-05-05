@@ -43,6 +43,8 @@ Partial Class Form1
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Tim = New System.Windows.Forms.Timer(Me.components)
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.ShowErrorMessages = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -195,8 +197,6 @@ Partial Class Form1
         'NotifyIcon1
         '
         Me.NotifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        Me.NotifyIcon1.BalloonTipText = "email has been sent to target list! "
-        Me.NotifyIcon1.BalloonTipTitle = "EMAIL SENT"
         Me.NotifyIcon1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
         Me.NotifyIcon1.Text = "Will notify you of successful emailings"
@@ -210,11 +210,34 @@ Partial Class Form1
         'Tim
         '
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(0, 0)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.TabIndex = 17
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'ShowErrorMessages
+        '
+        Me.ShowErrorMessages.AutoSize = True
+        Me.ShowErrorMessages.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ShowErrorMessages.Location = New System.Drawing.Point(308, 360)
+        Me.ShowErrorMessages.Name = "ShowErrorMessages"
+        Me.ShowErrorMessages.Size = New System.Drawing.Size(147, 17)
+        Me.ShowErrorMessages.TabIndex = 18
+        Me.ShowErrorMessages.Text = "show full error messages?"
+        Me.ShowErrorMessages.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ShowErrorMessages)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox4authorisation)
@@ -258,4 +281,6 @@ Partial Class Form1
     Friend WithEvents NotifyIcon1 As NotifyIcon
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents Tim As Timer
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents ShowErrorMessages As CheckBox
 End Class
